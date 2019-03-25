@@ -22,7 +22,7 @@ Children (or a child) are registered as users. House is set up (with the program
 ## Failed End Condition
 - Lights/music do not turn on with command.
 - Parent and other allowed users are unable to tell where the children are.
-- baby crying does not send alert
+- baby crying does not send alert or baby was not crying when alert was sent
 
 ## Extensions
 - Light/music do not turn on:
@@ -31,8 +31,8 @@ Children (or a child) are registered as users. House is set up (with the program
     1. Attempt reconnect to child cellphone gps.
     2. Try again every half hour.
     3. Do not display child location when location is unknown.
-- Baby cry alert does not send:
-    1. Have option to change upset baby detection method (to strict volume based, for example).
+- Baby cry alert does not send or was sent at wrong time:
+    1. Have option to change upset baby detection method (to adjustable volume and frequency based, for example).
 
 ## Steps of Execution (Requirements)
 - Connect with music/light software
@@ -43,7 +43,8 @@ Children (or a child) are registered as users. House is set up (with the program
 ## A use case diagrams
 Caption: This diagram shows the various ways that a child may effect the system. Further, it shows how a parent may be able to affect these interactions.
 
-Constructed By: Maya Cutkosky, Peer Reviewer:
+Constructed By: Maya Cutkosky,
+Peer Reviewer:
 
 <img src="KidUseCase.png">
 
