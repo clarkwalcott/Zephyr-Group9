@@ -1,19 +1,19 @@
 # Use Case 1
-## Title 
+## Title
 Parents, also known as admins, manage users and their privileges.
 
 ## Description
 
 Primarily, the parents are able to create, edit, and delete users. In detail, this means they can create both the grandparent and children users. From there they are able to edit their permissions, such as allowing the child to play music, but not allowing them to use appliances such as the stove. They also have the ability to delete users, in this regard an example would be when the children grow too old to be monitored in their rooms. The parents are able to do all things, and are in charge of distributing these privileges to the sub users.
 
-## Triggers 
+## Triggers
 
 creation of a user with successful login prompts the start of this use case
 
-## Actors 
+## Actors
 Parents
 
-## Preconditions 
+## Preconditions
 
 - app/site is running
 - logged in to running system
@@ -25,13 +25,13 @@ Parents
 - ability to use the parental controls like granting privileges is active
 - parent can monitor sub users, like children, as well as receive and react to alerts
 
-## Alternate Success Scenarios 
+## Alternate Success Scenarios
 
 - can restrict uses by other users, such as using appliances
 - can edit or delete a user after the main success scenario has been executed
 - monitors children or grandparent aside from alert scenario
 
-## Failed End Condition 
+## Failed End Condition
 
 - parent gives incorrect privileges, resulting in failed condition
 - parent unintentionally deletes a user
@@ -52,7 +52,7 @@ Parents
 - Parent logs in successfully
 - Parent utilizes the application/website (manage users, monitor sub users, etc)
 - Parent successfully logs out
-- System shuts down accordingly/when needed 
+- System shuts down accordingly/when needed
 
 ## A use case diagram
 
@@ -69,19 +69,19 @@ As the admin of this application, there is no dependent use cases. But, both the
 
 # Use Case 2
 
-## Title 
+## Title
 Grandparent interacts with WebPage and devices.
 
-## Description 
-The grandparent is granted certain permissions from the admin. With these permissions, the grandparent is able to access certain functionality in the system. In this case, he has access to Messaging, Monitoring Children, and Calling for Help functionalities, but could be granted additional privelidges. 
+## Description
+The grandparent is granted certain permissions from the admin. With these permissions, the grandparent is able to access certain functionality in the system. In this case, he has access to Messaging, Monitoring Children, and Calling for Help functionalities, but could be granted additional privileges.
 
-## Triggers 
+## Triggers
 Access to WebPage triggers this Use Case
-## Actors 
+## Actors
 
 * Grandparent
 
-## Preconditions 
+## Preconditions
 
 * WebPage is running
 * Logged-in to system
@@ -94,25 +94,25 @@ The grandparent can:
 * Call for help in the case of an emergency
 * Message other users (parents, children, etc.)
 
-## Alternate Success Scenarios 
+## Alternate Success Scenarios
 
 * A user is able to execute the functionality that they have been granted access to by the admin (e.g. use certain appliances, unlock front door, etc.).
 
-## Failed End Condition 
+## Failed End Condition
 
 * Messaging feature sends message to incorrect recipient
 * Alert functionality has false positives
 
 ## Extensions
 
-1. Website sends alert when nothing happened
+1. Website sends alert when nothing happened to grandparent
 	- Alert is displayed
 	- Page waits until user dismisses alert
 2. User is logged out unexpectedly
-    - Logged out message displayed
+    - 'Logged out' message displayed
     - Login page loaded
 3. Device is disconnected
-    - Unable to connect message displayed
+    - 'Unable to connect' message displayed
     - Attempts to reconnect
 
 ## Steps of Execution (Requirements)
@@ -125,6 +125,11 @@ The grandparent can:
 6. System shuts down when requested
 
 ## Use Case Diagram
+
+Caption: Diagram depicting the various actions a grandparent user can make when they log onto the system, and what impact it has on the system.
+
+Constructed By: Clark Walcott,
+Peer Reviewer: Maya Cutkosky
 
 https://drive.google.com/open?id=1Yy5fSc6m53X1OXBgfksyDnI0_B_L_Piv
 
@@ -157,7 +162,7 @@ Children (or a child) are registered as users. House is set up (with the program
 ## Failed End Condition
 - Lights/music do not turn on with command.
 - Parent and other allowed users are unable to tell where the children are.
-- baby crying does not send alert
+- baby crying does not send alert or baby was not crying when alert was sent
 
 ## Extensions
 - Light/music do not turn on:
@@ -166,8 +171,8 @@ Children (or a child) are registered as users. House is set up (with the program
     1. Attempt reconnect to child cellphone gps.
     2. Try again every half hour.
     3. Do not display child location when location is unknown.
-- Baby cry alert does not send:
-    1. Have option to change upset baby detection method (to strict volume based, for example).
+- Baby cry alert does not send or was sent at wrong time:
+    1. Have option to change upset baby detection method (to adjustable volume and frequency based, for example).
 
 ## Steps of Execution (Requirements)
 - Connect with music/light software
@@ -175,8 +180,13 @@ Children (or a child) are registered as users. House is set up (with the program
 - Recognize cry.
 - Security to keep others from accessing information or manipulate house using software.
 
-## A use case diagram
-https://drive.google.com/file/d/1KG2Iizy_fjP48qc0kH7eHzP-JZlQRhe4/view?usp=sharing
+## A use case diagrams
+Caption: This diagram shows the various ways that a child may effect the system. Further, it shows how a parent may be able to affect these interactions.
+
+Constructed By: Maya Cutkosky,
+Peer Reviewer:
+
+<img src="KidUseCase.png">
 
 ## Dependent Use Cases
 Parent Use Case
