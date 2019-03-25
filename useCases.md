@@ -171,7 +171,7 @@ Children (or a child) are registered as users. House is set up (with the program
 - Security to keep others from accessing information or manipulate house using software.
 
 ## A use case diagram
-KidUseCase.png
+https://drive.google.com/file/d/1KG2Iizy_fjP48qc0kH7eHzP-JZlQRhe4/view?usp=sharing
 
 ## Dependent Use Cases
 Parent Use Case
