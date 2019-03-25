@@ -1,3 +1,5 @@
+# Child Use Case
+
 ## Title
 Children interacting with system
 
@@ -39,7 +41,11 @@ Children (or a child) are registered as users. House is set up (with the program
 - Security to keep others from accessing information or manipulate house using software.
 
 ## A use case diagram
-KidUseCase.png
+<figure class="image">
+  <img src="{{ include.url }}" alt="{{ include.description }}">
+  <figcaption>{{ include.description }}</figcaption>
+</figure>
+{% include image.html url="KidUseCase.png" description="Diagram showing effect of children on system and how parent could affect these effects" %}
 
 ## Dependent Use Cases
 Parent Use Case
