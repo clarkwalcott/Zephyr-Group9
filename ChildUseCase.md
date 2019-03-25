@@ -40,12 +40,12 @@ Children (or a child) are registered as users. House is set up (with the program
 - Recognize cry.
 - Security to keep others from accessing information or manipulate house using software.
 
-## A use case diagram
-<figure class="image">
-  <img src="{{ include.url }}" alt="{{ include.description }}">
-  <figcaption>{{ include.description }}</figcaption>
-</figure>
-{% include image.html url="KidUseCase.png" description="Diagram showing effect of children on system and how parent could affect these effects" %}
+## A use case diagrams
+Caption: This diagram shows the various ways that a child may effect the system. Further, it shows how a parent may be able to affect these interactions.
+
+Constructed By: Maya Cutkosky, Peer Reviewer:
+
+<img src="KidUseCase.png">
 
 ## Dependent Use Cases
 Parent Use Case
