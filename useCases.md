@@ -58,7 +58,7 @@ Parents
 
 Caption: This diagram provides a top down perspective of how the system handles the parent create, edit, and remove activities. It also depicts how the parent interacts with the different appliances in the system. This diagram also describes functional requirements as well as typical interactions between the actors and the system.
 
-Constructed By: Jason Tesreau
+Constructed By: Jason Tesreau,
 Peer Reviewer: Clark Walcott
 
 https://drive.google.com/file/d/1HDQ3li7yBwUctRFIkVBD_nog_tgIZ5Mq/view?usp=sharing
