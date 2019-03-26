@@ -184,7 +184,7 @@ Children (or a child) are registered as users. House is set up (with the program
 Caption: This diagram shows the various ways that a child may effect the system. Further, it shows how a parent may be able to affect these interactions.
 
 Constructed By: Maya Cutkosky,
-Peer Reviewer:
+Peer Reviewer: Jason Tesreau
 
 <img src="KidUseCase.png">
 
