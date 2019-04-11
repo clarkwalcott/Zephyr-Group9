@@ -44,21 +44,20 @@ N/A
 
 ### User Interface Files
 
-1. It seems there will not be a user interface that is defined. Interaction will take place, but no UI will be necessary.
+1. index.html - This will house our forms for user input, and will produce the alerts to the users
+2. blah.php or .xml - This file will connect the zephyr code to our server, in short the backend
 
 
 ### Model Files (File Access)
 
 1. main.c - This file produces the output, and in the later steps of this project will allow connections between other files
-2. second one
-3. etc
+	- This file will also allow us to open, read, and output functionality to the server
 
 
 ### Controller Files (API or other)
 
-1. first one 
-2. second one
-3. etc. 
+1. Twilio - This API will allow the grandma to send messages to the parent, and vis versa  
+2. etc. 
 
 ## Describe languages you need to use, and any gaps in skills on your team. 
 
