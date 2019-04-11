@@ -10,7 +10,7 @@
 - We chose the DBOARD QEMU cortex_m3 because of its emulator capabilities, this way a physical board or server isnt necessary to visualize the output  
 - Right now there is no data that we feel the need to keep safe and store during reset, so a database wont be needed with our project
 
-![Running Evironment](Hello_World running.png)
+![Running Evironment](helloRun.png)
 
 ## Functional Requirements
 
