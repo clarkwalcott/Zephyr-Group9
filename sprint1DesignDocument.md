@@ -16,11 +16,11 @@
 	- The emulator should allow full access to the data and handling capabilities to the parent
 	- 
 	- ... etc.
-2. Use Case Name B		
+2. Grandparent Use Case	
 	- Functional Requirement 1
 	- Functional Requirement 2
 	- ... etc.
-3. ... etc. 
+3. Child Use Case
 
 ## Database Design
 
