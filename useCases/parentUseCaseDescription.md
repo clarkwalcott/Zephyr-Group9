@@ -13,7 +13,7 @@ creation of a user with successful login prompts the start of this use case
 Parents
 
 ## Preconditions 
-(This includes things like “data loaded”. Or, project is flagged as “of interest”; etc.)
+
 - app/site is running
 - logged in to running system
 - compatible appliances are connected
