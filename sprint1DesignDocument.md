@@ -14,26 +14,27 @@
 
 1. Parent Use Case
 	- The emulator should allow full access to the data and handling capabilities to the parent
-	- 
+	- A button, that can only be pressed by the parent, will simulate the use of appliances
+	- A drop down menu will show all connected appliances, and can allow "off" and "on" functionality
+	- Create a login page with all 3 actors, and force a password input if logging in as parent
+	- Set a cookie for the parent password
+2. Use Case Name B		
+	- Functional Requirement 1
+	- Functional Requirement 2
 	- ... etc.
-2. Grandparent Use Case	
-	- The grandparent can login from the main page
-	- From their dashboard, the grandparent can:
-		- Push a button to call for help
-		- Message other users (family members)
-		- Monitor the children
-3. Child Use Case
+3. Children Use Case
+	- Through the server, music can play from the local machine
 
 ## Database Design
 
 ### ERD
 
 **some kind of logical ERD, at least, that lets us know what data is being managed**
-![ERD](./images/erd.png)
+
 
 ### DDL 
 
-n/a
+N/A
 
 ## Files that are stubbed out in your repository, with comments about the use cases they are connected to. These sections may not all exist for the Zephyr project teams. Simply explain them as best you can. 
 
@@ -42,9 +43,9 @@ n/a
 1. It seems there will not be a user interface that is defined. Interaction will take place, but no UI will be necessary.
 
 
-### Model Files (Database Access)
+### Model Files (File Access)
 
-1. first one
+1. main.c - This file produces the output, and in the later steps of this project will allow connections between other files
 2. second one
 3. etc
 
@@ -62,6 +63,5 @@ n/a
 2. C
     - Due to previous courses taken here at Mizzou, we are all well equipped to write functioning code in C.
 3. Skill gaps, if any, otherwise specify who is doing what
-    - Gap 1: None of us have experience with emulators, or how zephyr interacts 
-    - name
-    - skill gap 
+    - Gap 1: None of us have experience with emulators, or how zephyr interacts with it
+    - All of us will be contributing to this gap, for this is the soul of our project build
