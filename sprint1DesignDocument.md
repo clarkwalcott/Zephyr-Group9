@@ -10,6 +10,8 @@
 - We chose the DBOARD QEMU cortex_m3 because of its emulator capabilities, this way a physical board or server isnt necessary to visualize the output  
 - Right now there is no data that we feel the need to keep safe and store during reset, so a database wont be needed with our project
 
+![Running Evironment](helloRun.png)
+
 ## Functional Requirements
 
 1. Parent Use Case
@@ -18,7 +20,7 @@
 	- A drop down menu will show all connected appliances, and can allow "off" and "on" functionality
 	- Create a login page with all 3 actors, and force a password input if logging in as parent
 	- Set a cookie for the parent password
-2. Use Case Name B		
+2. Grandparent Use Case		
 	- The grandparent can login from the main page
 	- From their dashboard, the grandparent can:
 		- Push a button to call for help
@@ -26,6 +28,8 @@
 		- Monitor the children
 3. Children Use Case
 	- Through the server, music can play from the local machine
+	- Implement a function that allows lights to be turned off and on
+	- Alert box will be displayed to alert the parent of the childs whereabouts
 
 ## Database Design
 
@@ -42,21 +46,20 @@ N/A
 
 ### User Interface Files
 
-1. It seems there will not be a user interface that is defined. Interaction will take place, but no UI will be necessary.
+1. index.html - This will house our forms for user input, and will produce the alerts to the users
+2. blah.php or .xml - This file will connect the zephyr code to our server, in short the backend
 
 
 ### Model Files (File Access)
 
 1. main.c - This file produces the output, and in the later steps of this project will allow connections between other files
-2. second one
-3. etc
+	- This file will also allow us to open, read, and output functionality to the server
 
 
 ### Controller Files (API or other)
 
-1. first one 
-2. second one
-3. etc. 
+1. Twilio - This API will allow the grandma to send messages to the parent, and vis versa  
+2. etc. 
 
 ## Describe languages you need to use, and any gaps in skills on your team. 
 
