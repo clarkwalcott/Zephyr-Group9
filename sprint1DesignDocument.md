@@ -17,9 +17,11 @@
 	- 
 	- ... etc.
 2. Grandparent Use Case	
-	- Functional Requirement 1
-	- Functional Requirement 2
-	- ... etc.
+	- The grandparent can login from the main page
+	- From their dashboard, the grandparent can:
+		- Push a button to call for help
+		- Message other users (family members)
+		- Monitor the children
 3. Child Use Case
 
 ## Database Design
