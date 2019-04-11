@@ -19,9 +19,11 @@
 	- Create a login page with all 3 actors, and force a password input if logging in as parent
 	- Set a cookie for the parent password
 2. Use Case Name B		
-	- Functional Requirement 1
-	- Functional Requirement 2
-	- ... etc.
+	- The grandparent can login from the main page
+	- From their dashboard, the grandparent can:
+		- Push a button to call for help
+		- Message other users (family members)
+		- Monitor the children
 3. Children Use Case
 	- Through the server, music can play from the local machine
 
