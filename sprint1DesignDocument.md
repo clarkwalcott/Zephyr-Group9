@@ -38,35 +38,39 @@
 **some kind of logical ERD, at least, that lets us know what data is being managed**
 
 
-### DDL 
-
-N/A
+ 
 
 ## Files that are stubbed out in your repository, with comments about the use cases they are connected to. These sections may not all exist for the Zephyr project teams. Simply explain them as best you can. 
 
 ### User Interface Files
 
 1. index.html - This will house our forms for user input, and will produce the alerts to the users
-2. blah.php or .xml - This file will connect the zephyr code to our server, in short the backend
+	- This file is connected to all 3 use cases
+2. info.php - This file will connect the zephyr code to our server, in short, the backend
+	- This file is mostly associated with the parent, for they are the admins dealing with the data
 
 
 ### Model Files (File Access)
 
 1. main.c - This file produces the output, and in the later steps of this project will allow connections between other files
 	- This file will also allow us to open, read, and output functionality to the server
+	- This file is associated with the parent and grandparent, for they will be handling the data sent between each other
 
 
 ### Controller Files (API or other)
 
-1. Twilio - This API will allow the grandma to send messages to the parent, and vis versa  
+1. Twilio - This API will allow the grandma to send messages to the parent, and vice versa
+	- This file/API is associated with the grandparent use case, in particular the message section
 2. etc. 
 
 ## Describe languages you need to use, and any gaps in skills on your team. 
 
 1. Python 
-    - Some members have base knowledge with this language, but will need to build on this in order to complete our project.
+	- Some members have base knowledge with this language, but will need to build on this in order to complete our project.
 2. C
-    - Due to previous courses taken here at Mizzou, we are all well equipped to write functioning code in C.
+	- Due to previous courses taken here at Mizzou, we are all well equipped to write functioning code in C.
 3. Skill gaps, if any, otherwise specify who is doing what
-    - Gap 1: None of us have experience with emulators, or how zephyr interacts with it
-    - All of us will be contributing to this gap, for this is the soul of our project build
+	- Gap 1: None of us have experience with emulators, or how zephyr interacts with it
+		- All of us will be contributing to this gap, for this is the soul of our project build
+	- Gap 2: None of us have done connections between zephyr and a server
+		- Again this is all of us contributing, with Jason and Clark taking the lead, for we have both taken web development classes. 
