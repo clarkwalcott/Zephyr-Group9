@@ -68,7 +68,7 @@
 1. Python 
 	- Some members have base knowledge with this language, but will need to build on this in order to complete our project.
 2. C
-    	- Due to previous courses taken here at Mizzou, we are all well equipped to write functioning code in C.
+	- Due to previous courses taken here at Mizzou, we are all well equipped to write functioning code in C.
 3. Skill gaps, if any, otherwise specify who is doing what
 	- Gap 1: None of us have experience with emulators, or how zephyr interacts with it
 		- All of us will be contributing to this gap, for this is the soul of our project build
