@@ -46,7 +46,7 @@
 
 1. index.html - This will house our forms for user input, and will produce the alerts to the users
 	- This file is connected to all 3 use cases
-2. blah.php or .xml - This file will connect the zephyr code to our server, in short, the backend
+2. info.php - This file will connect the zephyr code to our server, in short, the backend
 	- This file is mostly associated with the parent, for they are the admins dealing with the data
 
 
@@ -59,7 +59,7 @@
 
 ### Controller Files (API or other)
 
-1. Twilio - This API will allow the grandma to send messages to the parent, and vis versa
+1. Twilio - This API will allow the grandma to send messages to the parent, and vice versa
 	- This file/API is associated with the grandparent use case, in particular the message section
 2. etc. 
 
