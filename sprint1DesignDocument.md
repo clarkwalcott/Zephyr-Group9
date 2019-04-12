@@ -37,7 +37,7 @@
 
 **some kind of logical ERD, at least, that lets us know what data is being managed**
 
-
+![System ERD](Sprint1ERD.png)
  
 
 ## Files that are stubbed out in your repository, with comments about the use cases they are connected to. These sections may not all exist for the Zephyr project teams. Simply explain them as best you can. 
