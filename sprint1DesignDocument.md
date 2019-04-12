@@ -69,7 +69,7 @@
 2. C
 	- Due to previous courses taken here at Mizzou, we are all well equipped to write functioning code in C.
 3. Skill gaps, if any, otherwise specify who is doing what
-	- Gap 1: None of us have experience with emulators, or how zephyr interacts with it
+	- Gap 1: None of us have experience with device emulators, or how Zephyr interacts with them
 		- All of us will be contributing to this gap, for this is the soul of our project build
-	- Gap 2: None of us have done connections between zephyr and a server
-		- Again this is all of us contributing, with Jason and Clark taking the lead, for we have both taken web development classes. 
+	- Gap 2: None of us have done connections between Zephyr and a server
+		- Again this is all of us contributing, with Jason and Clark taking the lead, as we have both taken web development classes.
