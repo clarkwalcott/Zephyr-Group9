@@ -38,7 +38,6 @@
 **some kind of logical ERD, at least, that lets us know what data is being managed**
 
 ![System ERD](Sprint1ERD.png)
- 
 
 ## Files that are stubbed out in your repository, with comments about the use cases they are connected to. These sections may not all exist for the Zephyr project teams. Simply explain them as best you can. 
 
@@ -46,9 +45,8 @@
 
 1. index.html - This will house our forms for user input, and will produce the alerts to the users
 	- This file is connected to all 3 use cases
-2. info.php - This file will connect the zephyr code to our server, in short, the backend
-	- This file is mostly associated with the parent, for they are the admins dealing with the data
-
+2. app.css - This will contain any css needed for our UI
+3. app.js - This will contain any javascript needed for our UI
 
 ### Model Files (File Access)
 
@@ -56,12 +54,13 @@
 	- This file will also allow us to open, read, and output functionality to the server
 	- This file is associated with the parent and grandparent, for they will be handling the data sent between each other
 
-
 ### Controller Files (API or other)
 
 1. Twilio - This API will allow the grandma to send messages to the parent, and vice versa
 	- This file/API is associated with the grandparent use case, in particular the message section
-2. etc. 
+2. info.php - This file will connect the zephyr code to our server, in short, the backend
+	- This file is mostly associated with the parent, for they are the admins dealing with the data
+3. jquery-1.11.2.min.js - This file will allow us to access and use the JQuery library. Uses minified version for production.
 
 ## Describe languages you need to use, and any gaps in skills on your team. 
 
