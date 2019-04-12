@@ -8,7 +8,7 @@
 - From here we were able to set up the build environment, as well as build the application. We also had to set the toolchain variable and the zephyr variant in order for our board to recognize it
 - Lastly we found a board that acts as an emulator, so we were able to see output from our terminal by running 'ninja run'
 - We chose the DBOARD QEMU cortex_m3 because of its emulator capabilities, this way a physical board or server isnt necessary to visualize the output  
-- Right now there is no data that we feel the need to keep safe and store during reset, so a database wont be needed with our project
+- Right now there is no data that we feel the need to persist during reset, so a database wont be needed with our project
 
 ![Running Evironment](helloRun.png)
 
@@ -21,14 +21,15 @@
 	- Create a login page with all 3 actors, and force a password input if logging in as parent
 	- Set a cookie for the parent password
 2. Grandparent Use Case		
-	- The grandparent can login from the main page
+	- The grandparent can login from the main page (no password in this example)
 	- From their dashboard, the grandparent can:
 		- Push a button to call for help
 		- Message other users (family members)
 		- Monitor the children
 3. Children Use Case
+	- Logs in from main page (again no password in this example for ease of use by children)
 	- Through the server, music can play from the local machine
-	- Implement a function that allows lights to be turned off and on
+	- Function that allows lights to be turned off and on
 	- Alert box will be displayed to alert the parent of the childs whereabouts
 
 ## Database Design
@@ -63,13 +64,15 @@
 3. jquery-1.11.2.min.js - This file will allow us to access and use the JQuery library. Uses minified version for production.
 
 ## Describe languages you need to use, and any gaps in skills on your team. 
-
+Languages/Specifying who is doing what
 1. Python 
-	- Some members have base knowledge with this language, but will need to build on this in order to complete our project.
+	- Some members (Maya and Clark) have base knowledge of Python, but will need to build on this in order to complete our project.
 2. C
 	- Due to previous courses taken here at Mizzou, we are all well equipped to write functioning code in C.
-3. Skill gaps, if any, otherwise specify who is doing what
+3. Web Development (HTML, CSS, JavaScript/JQuery, PHP, AJAX framework, etc.)
+	- Jason and Clark will be taking the lead for this, as both have taken web development classes.
+4. Skill Gaps
 	- Gap 1: None of us have experience with device emulators, or how Zephyr interacts with them
 		- All of us will be contributing to this gap, for this is the soul of our project build
 	- Gap 2: None of us have done connections between Zephyr and a server
-		- Again this is all of us contributing, with Jason and Clark taking the lead, as we have both taken web development classes.
+		- Again this is all of us contributing
