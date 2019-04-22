@@ -17,7 +17,7 @@ int main(void)
 	printk("2. Message others \n");
 	printk("3. Notify parents of children location or emergency \n");
 	printk("Please make a selection: ");
-//	scanf("%d", &input);
+	scanf("%d", &input);
 
 	if(input == 1){
 		helpCall();
@@ -43,7 +43,7 @@ void messageOthers(){
 	char message[MAX_MESSAGE_LENGTH];
 	
 	printk("Type message here: ");
-//	scanf("%s", &message);
+	scanf("%s", &message);
 	printk("Message has been sent. /n");
 }
 
