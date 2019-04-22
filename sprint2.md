@@ -42,4 +42,14 @@
 ![mainC running](selectionRunning.png) 
 
 	- Here is the visual design of the EC2 instance running for user interaction
+[EC2](http://ec2-18-220-233-118.us-east-2.compute.amazonaws.com/SmartHome/)
+	
+	
+## Coding
+
+1.	Add all the code for your first full working prototype, following your design decisions, and save it in GitHub. 
+	- All files have been added to our github repo.
+		- The files listed in sprint2README.md can be found with their respective names
+		- The server/UI files can be found in the UI folder in our github repo
+ 
 
