@@ -8,6 +8,7 @@
 		- CMakeLists.txt
 		- prj.conf
 		- main.c
+	- There is a mandatory change in the CMakeLists.txt file, for the project path needed to be changed to sprint2 in order to find our specific project build
 	- The main.c file can be found in the src directory, and is where our code is written
 
 ![main C file](mainC.png)
