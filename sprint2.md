@@ -41,8 +41,8 @@
 
 ![mainC running](selectionRunning.png) 
 
-	- Here is the visual design of the EC2 instance running for user interaction
-[EC2](http://ec2-18-220-233-118.us-east-2.compute.amazonaws.com/SmartHome/)
+	- Here is the visual design of the EC2 instance running for user interaction (link provided)
+[EC2 Instance](http://ec2-18-220-233-118.us-east-2.compute.amazonaws.com/SmartHome/)
 	
 	
 ## Coding
