@@ -22,7 +22,6 @@
 
 ![mainC running](selectionRunning.png) 
 
+3. The user is able to access data through the UI. Currently the grandma page is the only active page. The functionality is not complete at this time.
 
-
-
-
+![grandma UI page](UIGrandma.png)
