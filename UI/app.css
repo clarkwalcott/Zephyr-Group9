@@ -1,0 +1,62 @@
+body {
+    background-image: url("milky-way.jpg");
+}
+
+.title {
+    margin: auto;
+    font-size: 3em;
+	text-align: center;	
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+#loginButton {
+    height: 8em;
+    width: 10em;
+    border-radius: 10%;
+}
+
+.center button {
+    display: block;
+    margin: 15% auto;
+}
+
+#mainWrapper {
+    display: block;
+    margin: 20px auto;
+    width: 990px;
+    border: 10px outset #26004d;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgba(230,230,230,0.5);
+}
+#contentBox {
+    color: black;
+    height: 400px;
+    width: 900px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: rgba(230,230,230,0.7);
+    text-align: center;
+}
+#buttonDiv {
+    display: flex;
+    align-content: center;
+    width: 900px;
+/*    border: 2px solid white;*/
+}
+button {
+    display: inline-block;
+    margin: auto;
+    height: 4em;
+    width: 8em;
+    border-radius: 8px;
+    background-color: darkcyan;
+    margin-right: 30px;
+}
+#lastButton {
+    margin-right: 50px;
+}
