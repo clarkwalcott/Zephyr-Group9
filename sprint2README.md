@@ -23,5 +23,7 @@
 ![mainC running](selectionRunning.png) 
 
 3. The user is able to access data through the UI. Currently the grandma page is the only active page. The functionality is not complete at this time.
+	- AJAX requests will probably be the way we tackle this problem, but zephyr has been giving us problems in every regard
+	- Due to us switching between command line input, and server input, we havent been able to fully implement this functionality
 
 ![grandma UI page](UIGrandma.png)
