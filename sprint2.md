@@ -18,6 +18,9 @@
 		- These changes will be seen in Sprint 3 and onward, when implementation occurs
 2.	Make any necessary changes to your ERD. Save this new ERD in GitHub and link it to the Sprint 2 wiki page.
 	- Our ERD still fleshes out our project in a manner we agree with, so we didnt see it neccessary to make any changes
+
+![System ERD](Sprint1ERD.png)
+
 3.	Design Document below 
 	- what is necessary for your whole system to work 
 		– Data Sources: data comes from the user and stored in the input variable, login data will also be stored on the EC2 instance 
