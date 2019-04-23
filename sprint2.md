@@ -12,7 +12,7 @@
 
 ## General Design
 
-1.	Clarify functional requirement specs for your use cases through conversations with stakeholders via Slack for Augur and Zephyr, and via Ed McCain for RJI>
+1.	Clarify functional requirement specs for your use cases through conversations with stakeholders via Slack for Augur and Zephyr
 	- Our functional requirements haven't really changed from Sprint 1, and from watching the Slack channel we feel we are on the right path
 	- We have implemented our Grandparent Use Case, but in terms of the other 2 Use Cases we don't know if our requirements need to change
 		- These changes will be seen in Sprint 3 and onward, when implementation occurs
@@ -24,6 +24,7 @@
 3.	Design Document below
 	- what is necessary for your whole system to work
 		– Data Sources: data comes from the user and stored in the input variable, login data will also be stored on the EC2 instance
+		Other data: We have created a base database through SQL, and will be implementing its connection when the other Use Cases that need it are implemented as well.
 		- Functions: main(), callHelp(), messageOthers(), notifyParents()
 		- The rest of the inventory: DBOARD QEMU cortex_m3, project files, EC2 instance, and possibly a database in the future, but isnt needed at this point in time for sprint 2
 	- Show clearly how the different software components communicate.
