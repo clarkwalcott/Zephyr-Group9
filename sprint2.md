@@ -22,24 +22,21 @@
 ![System ERD](Sprint1ERD.png)
 
 3.	Design Document below
-
-### what is necessary for your whole system to work
+	- what is necessary for your whole system to work
 		
-	– Data Sources: data comes from the user and stored in the input variable, login data will also be stored on the EC2 instance
-	- Other data: We have created a base database through SQL, and will be implementing its connection when the other Use Cases that need it are implemented as well.
-	- Functions: main(), callHelp(), messageOthers(), notifyParents()
-	- The rest of the inventory: DBOARD QEMU cortex_m3, project files, EC2 instance, and a basic database, with further implementation to follow in the next sprints
-	
-### Show clearly how the different software components communicate.
-	- the board allows for communication between the project build and the user
-	- The EC2 instance provides a user friendly UI for the grandparent in this Use Case to access
-	- the buttons on the website allows for communication to the user, visually showing them when something has happened
-
-### Document the reasons for your decisions where you have choices in design.
-	- At first the command line was our way of user interaction, but we felt it was a little too primitive for a grandparent
-	- The user input was also giving us many errors, so a switch seemed mandatory
-	- We have now switched to a EC2 instance/server to allow the users to see our project through a more "user friendly" lens
-	- In sprint 3 we also plan on connecting a database to this server, to allow for storage of login information, etc.
+		– Data Sources: data comes from the user and stored in the input variable, login data will also be stored on the EC2 instance
+		- Other data: We have created a base database through SQL, and will be implementing its connection when the other Use Cases that need it are implemented as well.
+		- Functions: main(), callHelp(), messageOthers(), notifyParents()
+		- The rest of the inventory: DBOARD QEMU cortex_m3, project files, EC2 instance, and possibly a database in the future, but isnt needed at this point in time for sprint 2
+	- Show clearly how the different software components communicate.
+		- the board allows for communication between the project build and the user
+		- The EC2 instance provides a user friendly UI for the grandparent in this Use Case to access
+		- the buttons on the website allows for communication to the user, visually showing them when something has happened
+	- Document the reasons for your decisions where you have choices in design.
+		- At first the command line was our way of user interaction, but we felt it was a little too primitive for a grandparent
+			- The user input was also giving us many errors, so a switch seemed mandatory
+		- We have now switched to a EC2 instance/server to allow the users to see our project through a more "user friendly" lens
+			- In sprint 3 we also plan on connecting a database to this server, to allow for storage of login information, etc.
 
 4.	Mock up a full visual design, even it its a pencil sketch, for all the ways users interact with your system.
 	- here is the visual design of user inputing on the command line
@@ -56,12 +53,13 @@
 	- All files have been added to our github repo.
 		- The files listed in sprint2README.md can be found with their respective names in the zephyrCode folder
 		- The server/UI files can be found in the UI folder in our github repo
+		- The base database configuration is shown in smart_home.sql
 
 
 ## Troubles:
 
 ### Command line difficulties
-- zephyr is harder to install on a virtual linux environment. Currently problems with cmake are causing crashes.
+- zephyr is harder to install on a virtual linux environment. Currently problems with newer versions of cmake are causing crashes.
 - Some standard C commands do not work properly (possibly due to it trying to simulate a specific board?), like the input-output commands. It is hard to do any kind of file io. Possibly there is a way to make it work in a linux environment. This made our initial plan, to save data to a file and then run code in another language on top of it, impractical.
 
 ### Zephyr artificial boards
