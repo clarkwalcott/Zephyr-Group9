@@ -61,4 +61,4 @@
 
 ### Zephyr artificial boards
 - 96_ArgonKey should be able to pick up sounds. However, after building and running ninja run on Zephyr's microphone sample code designed for this board, it outputs: "Emulation/Simulation not supported with this board". It would be nice to have this up and running for the children's use case. 
-- There seem to be a number of features that only work on linux (possibly including the fake boards), so an attempt was made to get a linux virtual environment up and running. As much troubleshooting is need for the linux system up and running as for getting the mac up and (somewhat) running.
+- There seem to be a number of features that only work on linux (possibly including the fake boards), so an attempt was made to get a linux virtual environment up and running. There was as much troubleshooting needed to get the linux system up and running as for getting the mac up and (somewhat) running.
