@@ -28,7 +28,7 @@
 	– Data Sources: data comes from the user and stored in the input variable, login data will also be stored on the EC2 instance
 	- Other data: We have created a base database through SQL, and will be implementing its connection when the other Use Cases that need it are implemented as well.
 	- Functions: main(), callHelp(), messageOthers(), notifyParents()
-	- The rest of the inventory: DBOARD QEMU cortex_m3, project files, EC2 instance, and possibly a database in the future, but isnt needed at this point in time for sprint 2
+	- The rest of the inventory: DBOARD QEMU cortex_m3, project files, EC2 instance, and a basic database, with further implementation to follow in the next sprints
 	
 ### Show clearly how the different software components communicate.
 	- the board allows for communication between the project build and the user
