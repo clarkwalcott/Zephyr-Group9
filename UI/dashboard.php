@@ -3,11 +3,15 @@
 <head>
 	<meta charset="utf-8">
     <!-- MAKE SURE TO UPDATE TITLE -->
-	<title>Grandma</title>
+	<title>Dashboard</title>
     <link rel="stylesheet" href="app.css">
 	<script src="app.js"></script>
     <script src="jquery-1.11.2.min.js"></script>
     <script>
+            $(function(){
+                $("#title").text("<?php print $username = $_COOKIE['username'];?>");
+            });
+                            
             function loading(){
                 $("#contentBox").html("Loading...");                
             }
@@ -84,7 +88,7 @@
         </script>
 </head>
 <body>
-	<p class="title">Grandma</p>
+	<p id="title">My Dashboard</p>
     <div id="mainWrapper">
         <div id="contentBox">
 

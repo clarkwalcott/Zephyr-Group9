@@ -1,6 +1,6 @@
 <?php
 // Created by Professor Wergeles for CS2830 at the University of Missouri
-
+// Modified by Clark Walcott
 
 	/*	
 		In cookie_cache we added 2 things:
@@ -14,7 +14,7 @@
 	$username = empty($_COOKIE['username']) ? '' : $_COOKIE['username'];
 	
 	if ($username) {
-		header("Location: page1.php");
+		header("Location: dashboard.php");
 		exit;
 	}
 	
@@ -32,7 +32,7 @@
 	
 		if ($username == "test" && $password == "pass") {
 			setcookie('username', $username);
-			header("Location: page1.php");
+			header("Location: dashboard.php");
 			exit;
 		} else {
 			$error = 'Error: Incorrect username or password';

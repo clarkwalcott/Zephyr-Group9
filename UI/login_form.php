@@ -26,7 +26,8 @@
         <form action="login.php" method="POST">
             
             <input type="hidden" name="action" value="do_login">
-            
+                
+            <!-- $username is inherited variable scope from login.php -->            
             <div class="stack">
                 <label for="username">User name:</label>
                 <input type="text" id="username" name="username" class="ui-widget-content ui-corner-all" autofocus value="<?php print $username; ?>">

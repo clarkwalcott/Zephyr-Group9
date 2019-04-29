@@ -4,7 +4,8 @@ body {
     background-image: url("milky-way.jpg");
 }
 
-.title {
+#title {
+    text-transform: capitalize;
     margin: auto;
     font-size: 3em;
 	text-align: center;	
@@ -13,7 +14,7 @@ body {
     -webkit-text-stroke-color: black;
 }
 
-/*  */
+/* For Dashboard */
 
 #buttonDiv .center button {
     display: inline-block;
