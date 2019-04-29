@@ -30,7 +30,7 @@
 		$username = empty($_POST['username']) ? '' : $_POST['username'];
 		$password = empty($_POST['password']) ? '' : $_POST['password'];
 	
-		if ($username == "test" && $password == "pass") {
+		if ($username == "test" || $username == "admin" && $password == "pass") {
 			setcookie('username', $username);
 			header("Location: dashboard.php");
 			exit;

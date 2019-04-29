@@ -4,7 +4,7 @@ body {
     background-image: url("milky-way.jpg");
 }
 
-#title {
+.title {
     text-transform: capitalize;
     margin: auto;
     font-size: 3em;
@@ -44,7 +44,8 @@ body {
 #buttonDiv {
     display: flex;
     align-content: center;
-    width: 900px;
+    width: 90%;
+    padding: 0 5% 0 5%;
 /*    border: 2px solid white;*/
 }
 #buttonDiv button {
@@ -52,12 +53,24 @@ body {
     margin: auto;
     height: 4em;
     width: 8em;
+    margin: 0 2.5% 0 2.5%;
     border-radius: 8px;
     background-color: darkcyan;
-    margin-right: 30px;
+    flex-grow: 1;
 }
 #lastButton {
     margin-right: 50px;
+}
+#logout {
+    height: 3em;
+    width: 5em;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+#logout a {
+    color: black;
+    text-decoration: none;
 }
 
 /* User Selection Page */

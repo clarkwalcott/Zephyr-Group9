@@ -9,7 +9,7 @@
     <script src="jquery-1.11.2.min.js"></script>
     <script>
             $(function(){
-                $("#title").text("<?php print $username = $_COOKIE['username'];?>");
+                $(".title").text("<?php print $username = empty($_COOKIE['username']) ? 'My Dashboard' : $_COOKIE['username'];?>");
             });
                             
             function loading(){
@@ -88,7 +88,7 @@
         </script>
 </head>
 <body>
-	<p id="title">My Dashboard</p>
+	<p class="title">My Dashboard</p>
     <div id="mainWrapper">
         <div id="contentBox">
 
@@ -99,5 +99,6 @@
             <button type="button" id="lastButton" class="button" onclick="MonitorKids()">Monitor Kids</button>
         </div>
     </div>
+    <button id="logout" onclick="location.href='logout.php'">Logout</button>
 </body>
 </html>
