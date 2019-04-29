@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+    <!-- MAKE SURE TO UPDATE TITLE -->
 	<title>Grandma</title>
     <link rel="stylesheet" href="app.css">
 	<script src="app.js"></script>
