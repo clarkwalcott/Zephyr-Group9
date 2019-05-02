@@ -1,4 +1,26 @@
 <!DOCTYPE html>
+
+<?php
+    /* This block of PHP code Created by Professor Wergeles for CS2830 at the University of Missouri */
+    $username = empty($_COOKIE['username']) ? '' : $_COOKIE['username'];
+
+    if (!$username) {
+        header("Location: login.php");
+        exit;
+    }
+
+    // If the user is authorized to view this content, we will display it.
+    // But before we do, we will set these headers to prevent caching.
+    
+    header("Cache-Control: no-store, no-cache, must-revalidate, pre-check=0, post-check=0, max-age=0, s-maxage=0");
+    header("Pragma:no-cache");
+    header("Expires: 0");
+    
+    // Browsers cache content by default. It makes for more efficient,
+    // faster loading web apps, but it's not always the desired behavior.
+    // This is especially true when the conent contains sensitive information.
+
+?>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -9,7 +31,7 @@
     <script src="jquery-1.11.2.min.js"></script>
     <script>
             $(function(){
-                $(".title").text("<?php print $username = empty($_COOKIE['username']) ? 'My Dashboard' : $_COOKIE['username'];?>");
+                $(".title").text("<?php print $username;?>");
             });
                             
             function loading(){
@@ -100,5 +122,6 @@
         </div>
     </div>
     <button id="logout" onclick="location.href='logout.php'">Logout</button>
+    <botton id="createUser" onclick="location.href='createUser.php'">Create User</botton>
 </body>
 </html>

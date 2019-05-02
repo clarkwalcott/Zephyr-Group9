@@ -27,17 +27,75 @@
 	}
 	
 	function handle_login() {
-		$username = empty($_POST['username']) ? '' : $_POST['username'];
+        $username = empty($_POST['username']) ? '' : $_POST['username'];
 		$password = empty($_POST['password']) ? '' : $_POST['password'];
-	
-		if ($username == "test" || $username == "admin" && $password == "pass") {
-			setcookie('username', $username);
-			header("Location: dashboard.php");
-			exit;
-		} else {
-			$error = 'Error: Incorrect username or password';
+        
+        // Require the credentials
+        require_once 'db.conf';
+        
+        // Check for errors
+        if ($mysqli->connect_error) {
+            $error = 'Error: ' . $mysqli->connect_errno . ' ' . $mysqli->connect_error;
 			require "login_form.php";
-		}		
+            exit;
+        }
+        
+        // http://php.net/manual/en/mysqli.real-escape-string.php
+        $username = $mysqli->real_escape_string($username);
+        $password = $mysqli->real_escape_string($password);
+        
+        if(strcmp($password, '') == 0){
+            $query = "SELECT userID FROM user WHERE userName = '$username' AND password IS NULL";
+        }
+        else{
+            //more secure password storing for website
+            $password = sha1($password); 
+
+            // Build query
+            $query = "SELECT userID FROM user WHERE userName = '$username' AND password = '$password'";
+        }
+        
+//        print $query;
+//        exit;
+        // Sometimes it's nice to print the query. That way you know what SQL you're working with.
+//        print $query;
+//        exit;
+        
+		// Run the query
+		$mysqliResult = $mysqli->query($query);
+		
+        // If there was a result...
+        if ($mysqliResult) {
+            // How many records were returned?
+            $match = $mysqliResult->num_rows;
+            
+//            print $match;
+//            exit;
+            
+            // Close the results
+            $mysqliResult->close();
+            // Close the DB connection
+            $mysqli->close();
+
+
+            // If there was a match, login
+  		    if ($match == 1) {
+                setcookie('username', $username);
+                header("Location: dashboard.php");
+                exit;
+            }
+            else {
+                $error = 'Error: Incorrect username or password';
+                require "login_form.php";
+                exit;
+            }
+        }
+        // Else, there was no result
+        else {
+          $error = 'Login Error: Please contact the system administrator.';
+          require "login_form.php";
+          exit;
+        }	
 	}
 	
 	function login_form() {
