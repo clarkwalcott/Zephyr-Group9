@@ -11,19 +11,10 @@
 // 		exit;
 // 	}
 	
-	$username = empty($_COOKIE['username']) ? '' : $_COOKIE['username'];
-	
-	if ($username) {
-		header("Location: dashboard.php");
-		exit;
-	}
-	
 	$action = empty($_POST['action']) ? '' : $_POST['action'];
 	
 	if ($action == 'do_create') {
 		handle_create();
-	} else {
-		login_form();
 	}
 	
 	function handle_create() {
@@ -67,56 +58,43 @@
 
             // Build query
             $query = 
-                "INSERT INTO userInfo (firstName, lastName, cellPhoneNumber, email) values 
-                    ('$firstName', '$lastName', '$phoneNumber' '$email');
-                INSERT INTO user (username, password) values
-                    ('$username', sha1('$password'));";
+                "INSERT INTO userInfo (firstName, lastName, cellPhoneNumber, email)
+                values('$firstName', '$lastName', '$phoneNumber', '$email');";
 
             // Sometimes it's nice to print the query. That way you know what SQL you're working with.
 //            print $query;
 //            exit;
 
             // Run the query
-            $mysqliResult = $mysqli->query($query);
+            $mysqli->query($query);
+            $mysqliResult = $mysqli->query('SELECT LAST_INSERT_ID();');
+            $row = mysqli_fetch_assoc($mysqliResult);
+            $userID = $row['LAST_INSERT_ID()'];
 
-            print $mysqliResult;
-            exit;
+            $query2 = 
+                "INSERT INTO user (userID, username, password, permissions) values
+                    ('$userID', '$username', sha1('$password'), 'user');";
+            $mysqliResult2 = $mysqli->query($query2);
+//            print $mysqliResult;
+//            exit;
             // If there was a result...
-            if ($mysqliResult) {
-                // How many records were returned?
-                $match = $mysqliResult->num_rows;
-
-                // Close the results
+            if ($mysqliResult){
                 $mysqliResult->close();
-                // Close the DB connection
-                $mysqli->close();
-
-
-                // If there was a match, login
-                if ($match == 1) {
-                    header("Location: dashboard.php");
-                    exit;
-                }
-                else {
-                    $error = 'Error: Incorrect username or password';
-                    require "login_form.php";
-                    exit;
-                }
+            }
+            if ($mysqliResult2) {
+                // Close the results
+                $mysqliResult2->close();
             } 
+            // Close the DB connection
+            $mysqli->close();
+            header("Location: dashboard.php");
+            exit;
         } 
         // Else, there was no result
         else {
-          $error = 'Login Error: Please contact the system administrator.';
-          require "login_form.php";
+          $error = 'Error: Please contact the system administrator.';
+          require "dashboard.php";
           exit;
         }
 	}
-	
-	function login_form() {
-		$username = "";
-		$error = "";
-		require "login_form.php";
-        exit;
-	}
-	
 ?>

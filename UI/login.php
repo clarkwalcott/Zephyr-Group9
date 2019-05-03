@@ -52,18 +52,16 @@
             $password = sha1($password); 
 
             // Build query
-            $query = "SELECT userID FROM user WHERE userName = '$username' AND password = '$password'";
+            $query = "SELECT userID, permissions FROM user WHERE userName = '$username' AND password = '$password'";
         }
         
-//        print $query;
-//        exit;
         // Sometimes it's nice to print the query. That way you know what SQL you're working with.
 //        print $query;
 //        exit;
         
 		// Run the query
 		$mysqliResult = $mysqli->query($query);
-		
+        
         // If there was a result...
         if ($mysqliResult) {
             // How many records were returned?
@@ -71,16 +69,17 @@
             
 //            print $match;
 //            exit;
+            $row = mysqli_fetch_assoc($mysqliResult);
             
             // Close the results
             $mysqliResult->close();
             // Close the DB connection
             $mysqli->close();
 
-
             // If there was a match, login
   		    if ($match == 1) {
                 setcookie('username', $username);
+                setcookie('permissions', $row['permissions']);
                 header("Location: dashboard.php");
                 exit;
             }

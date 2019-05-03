@@ -32,10 +32,19 @@
     <script>
             $(function(){
                 $(".title").text("<?php print $username;?>");
+                handleAdmin();
             });
                             
             function loading(){
                 $("#contentBox").html("Loading...");                
+            }
+        
+            function handleAdmin(){
+                var permissions = "<?php print $_COOKIE['permissions'];?>";
+                if(permissions.localeCompare('admin') == 0){
+                    console.log("works");
+                    $("#createUser").css("visibility", "visible");
+                }
             }
             // Button functions
             // Make AJAX calls to update contentBox
@@ -122,6 +131,6 @@
         </div>
     </div>
     <button id="logout" onclick="location.href='logout.php'">Logout</button>
-    <botton id="createUser" onclick="location.href='createUser.php'">Create User</botton>
+    <button id="createUser" onclick="location.href='createUser_form.php'">Create User</button>
 </body>
 </html>

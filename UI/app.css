@@ -73,6 +73,10 @@ body {
     text-decoration: none;
 }
 
+#createUser {
+    visibility: hidden;
+}
+
 /* User Selection Page */
 
 #userDiv {
