@@ -43,10 +43,13 @@
             // Check for errors
             if ($mysqli->connect_error) {
                 $error = 'Error: ' . $mysqli->connect_errno . ' ' . $mysqli->connect_error;
-                require "login_form.php";
+                require "dashboard.php";
                 exit;
             }
 
+            // Set autocommit to off
+//            $mysqli->autocommit(FALSE);
+            
             // http://php.net/manual/en/mysqli.real-escape-string.php
             $firstName = $mysqli->real_escape_string($firstName);
             $lastName = $mysqli->real_escape_string($lastName);
@@ -67,24 +70,22 @@
 
             // Run the query
             $mysqli->query($query);
+            
+            // Grab the ID of the row we just inserted into
             $mysqliResult = $mysqli->query('SELECT LAST_INSERT_ID();');
             $row = mysqli_fetch_assoc($mysqliResult);
             $userID = $row['LAST_INSERT_ID()'];
-
+            
+            // Close the results
+            $mysqliResult->close();
+            
+            // Use the ID we just grabbed to insert into the user table
             $query2 = 
                 "INSERT INTO user (userID, username, password, permissions) values
                     ('$userID', '$username', sha1('$password'), 'user');";
-            $mysqliResult2 = $mysqli->query($query2);
+            $mysqli->query($query2);
 //            print $mysqliResult;
 //            exit;
-            // If there was a result...
-            if ($mysqliResult){
-                $mysqliResult->close();
-            }
-            if ($mysqliResult2) {
-                // Close the results
-                $mysqliResult2->close();
-            } 
             // Close the DB connection
             $mysqli->close();
             header("Location: dashboard.php");
