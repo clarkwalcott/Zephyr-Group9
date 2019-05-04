@@ -1,7 +1,9 @@
 <?php
 // Created by Professor Wergeles for CS2830 at the University of Missouri
+// Modified by Clark Walcott
 
 	setcookie('username', '', 1);
-	header("Location: login.php");
+    setcookie('permissions', '', 1);
+	header("Location: index.php");
 	exit;
 ?>

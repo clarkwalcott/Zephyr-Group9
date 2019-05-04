@@ -44,6 +44,7 @@
         $username = $mysqli->real_escape_string($username);
         $password = $mysqli->real_escape_string($password);
         
+        // if the user doesn't have a password, allow them to login
         if(strcmp($password, '') == 0){
             $query = "SELECT userID FROM user WHERE userName = '$username' AND password IS NULL";
         }
