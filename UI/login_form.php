@@ -30,7 +30,7 @@
             <!-- $username is inherited variable scope from login.php -->            
             <div class="stack">
                 <label for="username">User name:</label>
-                <input type="text" id="username" name="username" class="ui-widget-content ui-corner-all" disabled autofocus value="<?php print $username; ?>">
+                <input type="text" id="username" name="username" class="ui-widget-content ui-corner-all" readonly autofocus value="<?php print $username; ?>">
             </div>
             
             <div class="stack">
