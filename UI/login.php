@@ -17,7 +17,7 @@
 		header("Location: dashboard.php");
 		exit;
 	}
-	
+
 	$action = empty($_POST['action']) ? '' : $_POST['action'];
 	
 	if ($action == 'do_login') {
@@ -99,7 +99,7 @@
 	}
 	
 	function login_form() {
-		$username = "";
+        $username = empty($_POST['username']) ? '' : $_POST['username'];
 		$error = "";
 		require "login_form.php";
 	}

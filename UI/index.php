@@ -6,12 +6,25 @@
 	<link rel="stylesheet" href="app.css">
 	<script src="app.js"></script> 
     <script src="jquery-1.11.2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            var fired_button = $(this).text();
+            $("input[name=username]").val(fired_button).trigger('change');
+            document.usernameForm.submit();
+          });
+        });
+        function loginRedirect(){
+            
+           
+        }
+    </script>
 </head>
 <body>
     <p class="title">Smart Home Systems</p>
     <div class="center">
         <div id="userDiv">
-            <button class="userButton" onclick="loginRedirect()" id="admin">Admin</button>
+            <button class="userButton" onclick="loginRedirect()" id="admin">admin</button>
 
         <!-- TODO: dynamically add button for each userID. Select userIDs from database and set button text equal to userID (uppercase first letter) -->
             <?php 
@@ -54,14 +67,16 @@
                     // Close the DB connection
                     $mysqli->close();
 
+                    $i = 1;
                     // If the number of rows returned is not zero, create $n buttons
                     if ($n > 0) {
                         foreach($usernames as $username){
                             print("
-                                <button class='userButton'
-                                    onclick= \"location.href='http://ec2-18-220-233-118.us-east-2.compute.amazonaws.com/SmartHome/login.php'\">$username[0]
+                                <button class='userButton' id='userButton$i'
+                                    onclick='loginRedirect()'>$username[0]
                                 </button>
                             ");
+                            $i++;
                         }
                     }
                 // Else, there was no result
@@ -79,5 +94,8 @@
 -->
         </div>
     </div>
+    <form name='usernameForm' method="post" action="login.php">
+        <input type="hidden" name="username" value="">
+    </form>
 </body>
 </html>
