@@ -13,4 +13,4 @@ To access the database directly:
 7. Set Username to 'admin' and store 'smarthomeadmin' in the Password vault.
 8. Test the connection, click continue if prompted, and if successful, click close.
 9. Double click on the connection from the dashboard and execute any queries from the next page using the lightning bolt.
-NOTE: need to change to different EC2 instance. This functionality is temporarily unavailable.
+- NOTE: need to change to different EC2 instance. This functionality is temporarily unavailable.
