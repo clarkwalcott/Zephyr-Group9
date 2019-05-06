@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 23, 2019 at 03:42 AM
+-- Generation Time: May 06, 2019 at 01:06 AM
 -- Server version: 5.5.62
 -- PHP Version: 5.6.39
 
@@ -74,7 +74,7 @@ INSERT INTO `system` (`numberOfUsers`, `devicesConnected`) VALUES
 CREATE TABLE `user` (
   `userID` int(4) NOT NULL,
   `username` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `password` text COLLATE utf8_unicode_ci,
   `permissions` enum('admin','user') COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -83,12 +83,13 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`userID`, `username`, `password`, `permissions`) VALUES
-(1, 'janedoe', '', 'admin'),
-(2, 'johndoe', NULL, 'admin'),
+(1, 'janedoe', '9d4e1e23bd5b727046a9e3b4b7db57bd8d6ee684', 'admin'),
+(2, 'johndoe', '9d4e1e23bd5b727046a9e3b4b7db57bd8d6ee684', 'admin'),
 (3, 'jennydoe', NULL, 'user'),
 (4, 'johnnydoe', NULL, 'user'),
 (5, 'jacksondoe', NULL, 'user'),
-(6, 'hotwheelsgranny', NULL, 'user');
+(6, 'hotwheelsgranny', NULL, 'user'),
+(7, 'test', '9d4e1e23bd5b727046a9e3b4b7db57bd8d6ee684', 'admin');
 
 -- --------------------------------------------------------
 
@@ -97,7 +98,7 @@ INSERT INTO `user` (`userID`, `username`, `password`, `permissions`) VALUES
 --
 
 CREATE TABLE `userInfo` (
-  `userID` int(4) NOT NULL,
+  `userID` int(11) NOT NULL,
   `firstName` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `lastName` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `cellPhoneNumber` int(10) NOT NULL,
@@ -114,7 +115,8 @@ INSERT INTO `userInfo` (`userID`, `firstName`, `lastName`, `cellPhoneNumber`, `e
 (3, 'Jenny', 'Doe', 1234567888, 'jennydoe@hotmail.com'),
 (4, 'Johnny', 'Doe', 1234567877, 'johnnydoe@hotmail.com'),
 (5, 'Jackson', 'Doe', 1234567887, 'jacksondoe@hotmail.com'),
-(6, 'Geraldine', 'Doe', 1234566678, 'grannysgotwheels@hotmail.com');
+(6, 'Geraldine', 'Doe', 1234566678, 'grannysgotwheels@hotmail.com'),
+(7, 'test', 'test', 1234566666, 'test@hotmail.com');
 
 --
 -- Indexes for dumped tables
@@ -130,7 +132,18 @@ ALTER TABLE `user`
 -- Indexes for table `userInfo`
 --
 ALTER TABLE `userInfo`
-  ADD PRIMARY KEY (`userID`);
+  ADD PRIMARY KEY (`userID`),
+  ADD UNIQUE KEY `userID` (`userID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `userInfo`
+--
+ALTER TABLE `userInfo`
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables
