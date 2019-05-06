@@ -1,5 +1,5 @@
 To access user interface, go to:
-- [Smart Home](ec2-18-220-233-118.us-east-2.compute.amazonaws.com/SmartHome/ "Smart Home EC2")
+- [Smart Home](https://ec2-18-220-233-118.us-east-2.compute.amazonaws.com/SmartHome/ "Smart Home EC2")
 
 To add, modify, or delete users from the database, login to a user with admin privileges.
 
