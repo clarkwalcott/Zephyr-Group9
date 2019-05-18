@@ -15,4 +15,6 @@ To access the database directly:
 9. Double click on the connection from the dashboard and execute any queries from the next page using the lightning bolt.
 - NOTE: need to change to different EC2 instance. This functionality is currently unavailable. Had someone hack into and drop all tables multiple times due to security issues.
 
-We've experienced many difficulties in terms of creating a Zephyr build. Some of the issues can be seen in the github issues we made and documented. Maya also created a wiki page titled "Running devices using Zephyr", and explains some of the steps we took, as well as some problems we faced. Effort has been made, but success has been limited.
+We've experienced many difficulties in terms of creating a Zephyr build. Some of the issues can be seen in the github issues we made and documented. Maya also created a wiki page titled "Running devices using Zephyr", and explains some of the steps we took, as well as some problems we faced.
+
+The development instructions in terms of Zephyr can be seen here: https://github.com/clarkwalcott/Zephyr-Group9/blob/master/setupZephyrInstructions.md
