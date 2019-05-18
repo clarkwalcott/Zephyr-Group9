@@ -1,7 +1,7 @@
 To access user interface, go to:
 - [Smart Home](http:ec2-18-220-233-118.us-east-2.compute.amazonaws.com/SmartHome/)
 
-To add, modify, or delete users from the database, login to a user with admin privileges.
+To add users to the database, login to a user with admin privileges.
 
 To access the database directly:
 1. Open MySQL Workbench and navigate to the 'Database' drop down menu.
@@ -13,6 +13,6 @@ To access the database directly:
 7. Set Username to 'admin' and store 'smarthomeadmin' in the Password vault.
 8. Test the connection, click continue if prompted, and if successful, click close.
 9. Double click on the connection from the dashboard and execute any queries from the next page using the lightning bolt.
-- NOTE: need to change to different EC2 instance. This functionality is temporarily unavailable.
+- NOTE: need to change to different EC2 instance. This functionality is currently unavailable. Had someone hack into and drop all tables multiple times due to security issues.
 
-We've experienced many difficulties in terms of creating a Zephyr build. Some of the issues can be seen in the github issues we made and documented. Maya also created a wiki page titled "Running devices using Zephyr", and explains some of the steps we took, as well as some problems we faced. Effort has been made, but success has been limited. We will get this working in the coming days/weeks.
+We've experienced many difficulties in terms of creating a Zephyr build. Some of the issues can be seen in the github issues we made and documented. Maya also created a wiki page titled "Running devices using Zephyr", and explains some of the steps we took, as well as some problems we faced. Effort has been made, but success has been limited.
